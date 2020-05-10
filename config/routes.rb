@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get '/login' => 'sessions#new' 
+  post '/login' => 'sessions#create' 
+  post '/logout' => 'sessions#destroy' 
+  root 'welcome#home' 
   resources :current_seasons
   resources :seasons
   resources :games
