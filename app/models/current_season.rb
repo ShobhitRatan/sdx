@@ -1,0 +1,2 @@
+class CurrentSeason < ApplicationRecord
+end
