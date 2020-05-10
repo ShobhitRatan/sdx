@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
     t.string "address_type"
     t.string "address_line_2"
     t.string "city"
-    t.integer "state_id"
+    t.string "state"
     t.integer "zipcode"
-    t.integer "country_id"
+    t.string "country"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -28,13 +28,6 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
   create_table "conferences", force: :cascade do |t|
     t.integer "division_id"
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "countries", force: :cascade do |t|
-    t.string "country_code"
-    t.string "country_long_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -99,13 +92,6 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
 
   create_table "seasons", force: :cascade do |t|
     t.string "season_type"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "states", force: :cascade do |t|
-    t.string "state_code"
-    t.string "state_long_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
