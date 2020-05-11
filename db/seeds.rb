@@ -13,9 +13,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all 
-
+Division.destroy_all 
+Conference.destroy_all 
 
 30.times do 
     User.create(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: Faker::IDNumber.valid)   
 end 
 
+division1 = Division.create(region: "East") 
+division2 = Division.create(region: "North") 
+division3 = Division.create(region: "West") 
+division4 = Division.create(region: "South") 
