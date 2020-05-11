@@ -6,7 +6,7 @@ class DivisionsController < ApplicationController
     def show 
         @division = Division.find_by(params[:id]) 
     end 
-
+    
     private 
     def division_params 
         params.require(:division).permit(:region) 
