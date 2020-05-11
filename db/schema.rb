@@ -66,26 +66,12 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "payment_types", force: :cascade do |t|
-    t.string "payment_type"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "payments", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "payment_type_id"
-    t.integer "credit_card_digest"
+    t.string "payment_type"
+    t.string "credit_card"
     t.datetime "expiry_date"
     t.integer "cvv"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "premia", force: :cascade do |t|
-    t.integer "user_id"
-    t.datetime "start_date"
-    t.datetime "end_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
