@@ -19,7 +19,7 @@ Division.destroy_all
     User.create(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: Faker::IDNumber.valid)   
 end 
 
-division1 = Division.create(region: "East") 
-division2 = Division.create(region: "North") 
-division3 = Division.create(region: "West") 
-division4 = Division.create(region: "South") 
+Division.create(region: "East") 
+Division.create(region: "North") 
+Division.create(region: "West") 
+Division.create(region: "South") 
