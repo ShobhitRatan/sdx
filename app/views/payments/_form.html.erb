@@ -1,0 +1,25 @@
+<%= form_for @payment do |f| %> 
+    <div class="field"> 
+        <%= f.label :user_id %> 
+        <%= f.collection_select :user_id, @users, :id, :name %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :payment_type %> 
+        <%= f.text_field :payment_type %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :credit_card %> 
+        <%= f.text_field :credit_card %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :expiry_date %> 
+        <%= f.date_field :expiry_date %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :cvv %> 
+        <%= f.number_field :cvv %> 
+    </div> 
+    <div class="actions"> 
+        <%= f.submit%> 
+    </div>
+<% end %> 

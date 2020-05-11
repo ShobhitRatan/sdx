@@ -1,0 +1,15 @@
+<div class="container"> 
+    <h1>Show Payment Details</h1> 
+
+    <h3><%= @payment.payment_type %></h3> 
+
+    <h3><%= @payment.created_at %></h3> 
+
+    <h3><%= @payment.updated_at %></h3> 
+
+    <h2><%= button_to "Back", payments_path, method: :get %></h2> 
+    
+    <h2><%= button_to 'Edit', edit_payment_path, method: :get %></h2> 
+
+    <h2><%= button_to 'Back', payments_path, method: :get %></h2> 
+</div> 

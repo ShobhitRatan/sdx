@@ -1,0 +1,29 @@
+<h1>Payment History</h1> 
+
+<div><%= link_to 'Adding Payment Details', new_payment_path %></div> 
+<br /> 
+
+<table> 
+    <thead> 
+        <tr> 
+            <th>Payment Type</th> 
+            <th>First Payment</th> 
+            <th>Last Payment</th> 
+            <th></th> 
+        </tr> 
+    </thead> 
+    <tbody> 
+        <% @user.payments.each do |payment| %> 
+            <tr> 
+                <td><%= payment.payment_type %> 
+                <td><%= payment.created_at %> 
+                <td><%= payment.updated_at %> 
+                <td> 
+                    <%= link_to 'View', payment %> |
+                    <%= link_to 'Edit', edit_payment_path(payment) %> 
+                    <%= link_to 'Delete', payment, method: :delete, data: { confirm: 'Are you sure you want to delete this payment?' } %> 
+                </td> 
+            </tr> 
+        <% end %> 
+    </tbody> 
+</table>  
