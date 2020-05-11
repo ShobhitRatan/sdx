@@ -14,7 +14,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all 
 Division.destroy_all 
-Conference.destroy_all 
 
 30.times do 
     User.create(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: Faker::IDNumber.valid)   
