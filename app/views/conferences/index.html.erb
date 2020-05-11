@@ -1,0 +1,18 @@
+<h1>Conferences</h1> 
+
+<table> 
+    <thead> 
+        <tr> 
+            <th>Name</th> 
+            <th></th> 
+        </tr>
+    </thead> 
+    <tbody> 
+        <% @conferences.each do |conference| %> 
+            <tr> 
+                <td><%= conference.name %> 
+                <td><%= link_to 'View', conference %> 
+            </tr> 
+        <% end %> 
+    </tbody> 
+</table> 

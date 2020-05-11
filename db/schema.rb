@@ -47,20 +47,20 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
   create_table "gamedays", force: :cascade do |t|
     t.integer "team_id"
     t.integer "game_id"
-    t.string "winner"
-    t.string "loser"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "games", force: :cascade do |t|
-    t.integer "season_id"
     t.string "score"
     t.datetime "time_of_possession"
     t.float "passing_yards"
     t.float "rushing_yards"
     t.integer "total_turnovers"
     t.integer "penalties"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.integer "season_id"
+    t.string "winner"
+    t.string "loser"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
