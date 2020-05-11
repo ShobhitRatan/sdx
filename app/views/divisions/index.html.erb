@@ -1,0 +1,18 @@
+<h1>Divisions</h1> 
+
+<table> 
+    <thead> 
+        <tr> 
+            <th>Region</th> 
+            <th></th> 
+        </tr>
+    </thead> 
+    <tbody> 
+        <% @divisions.each do |division| %> 
+            <tr> 
+                <td><%= division.region %> 
+                <td><%= link_to 'View', division %> 
+            </tr> 
+        <% end %> 
+    </tbody> 
+</table> 
