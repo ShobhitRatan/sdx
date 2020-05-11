@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
   end
 
   create_table "conferences", force: :cascade do |t|
-    t.integer "division_id"
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
