@@ -6,6 +6,5 @@
     <% @team.games.uniq.each do |game| %> 
         <p><%= link_to game.name, game_path(game) %> 
     <% end %> 
-
     <h2><%= button_to "Back", teams_path, method: :get %></h2> 
 </div>
