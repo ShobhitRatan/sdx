@@ -4,7 +4,7 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.string :name 
       t.string :winner
       t.string :loser
-
+      t.datetime :gametime 
       t.timestamps
     end
   end

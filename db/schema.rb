@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
     t.string "name"
     t.string "winner"
     t.string "loser"
+    t.datetime "gametime"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

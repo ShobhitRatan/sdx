@@ -4,11 +4,7 @@ class DivisionsController < ApplicationController
     end 
 
     def show 
-        @division = Division.find_by(params[:id]) 
-    end 
-    
-    private 
-    def division_params 
-        params.require(:division).permit(:region) 
+        @conference = Conference.find(params[:id]) 
+        @division = @conference.divisions.find(params[:id]) 
     end 
 end
