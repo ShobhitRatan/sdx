@@ -5,7 +5,7 @@ class CreateTeams < ActiveRecord::Migration[6.0]
       t.string :city
       t.integer :conference_id
       t.integer :division_id
-
+      t.string :image 
       t.timestamps
     end
   end
