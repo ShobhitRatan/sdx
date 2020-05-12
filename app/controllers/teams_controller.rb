@@ -8,9 +8,4 @@ class TeamsController < ApplicationController
     def show 
         @team = Team.find_by(params[:id]) 
     end 
-
-    private 
-    def team_params 
-        params.require(:team).permit(:conference_id, :division_id, :name, :city) 
-    end 
 end

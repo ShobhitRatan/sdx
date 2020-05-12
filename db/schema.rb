@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
     t.string "city"
     t.integer "conference_id"
     t.integer "division_id"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
