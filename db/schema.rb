@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.integer "season_id"
+    t.string "name"
     t.string "winner"
     t.string "loser"
     t.datetime "created_at", precision: 6, null: false
