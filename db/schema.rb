@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
   end
 
   create_table "conferences", force: :cascade do |t|
-    t.integer "division_id"
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -48,20 +47,21 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
   create_table "gamedays", force: :cascade do |t|
     t.integer "team_id"
     t.integer "game_id"
-    t.string "winner"
-    t.string "loser"
+    t.string "score"
+    t.string "time_of_possession"
+    t.float "passing_yards"
+    t.float "rushing_yards"
+    t.integer "total_turnovers"
+    t.integer "penalties"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "games", force: :cascade do |t|
-    t.integer "season_id"
-    t.string "score"
-    t.datetime "time_of_possession"
-    t.float "passing_yards"
-    t.float "rushing_yards"
-    t.integer "total_turnovers"
-    t.integer "penalties"
+    t.string "name"
+    t.string "winner"
+    t.string "loser"
+    t.datetime "gametime"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 2020_05_10_034032) do
     t.string "city"
     t.integer "conference_id"
     t.integer "division_id"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

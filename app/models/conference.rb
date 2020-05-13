@@ -1,4 +1,4 @@
 class Conference < ApplicationRecord
-    has_many :divisions 
     has_many :teams 
+    has_many :divisions, through: :teams 
 end

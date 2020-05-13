@@ -1,0 +1,10 @@
+<div class="container"> 
+    <h3><%= @team.name %></h3> 
+    <h3><%= @team.city %></h3>  
+    <img class='team-img' src="<%= @team.image %>" alt="<%@team.name%>"> 
+    <h1>All games played by this team</h1> 
+    <% @team.games.uniq.each do |game| %> 
+        <p><%= link_to game.name, game_path(game) %></p>
+    <% end %> 
+    <h2><%= button_to "Back", teams_path, method: :get %></h2> 
+</div>
