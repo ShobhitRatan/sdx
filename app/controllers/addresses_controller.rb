@@ -6,7 +6,7 @@ class AddressesController < ApplicationController
 
     def show 
         @user = current_user 
-        @address = @user.addresses.find_by(params[:id]) 
+        @address = @user.addresses.find(params[:id]) 
     end 
 
     def new 
