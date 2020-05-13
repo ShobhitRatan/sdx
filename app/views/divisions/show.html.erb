@@ -2,10 +2,8 @@
     <h1><%= @division.region %> 
     
     <h1>Teams in this division</h1> 
-    <% @division.teams.select do |team| %> 
-        <% if @conference.teams.name == @division.teams.name %>
-            <p><%= link_to team.name, team_path(team) %> 
-        <% end %>
+    <% @division.afc_east_teams.each do |team|%> 
+         <p><%= link_to team.name, team_path(team) %> 
     <% end %> 
 
     <h2><%= button_to "Back", divisions_path, method: :get %></h2>
