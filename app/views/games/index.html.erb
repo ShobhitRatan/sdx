@@ -1,0 +1,24 @@
+<h1>Games</h1> 
+
+<table> 
+    <thead> 
+        <tr> 
+            <th>Name</th> 
+            <th>Winner</th> 
+            <th>Loser</th> 
+            <th>Game Time</th>  
+            <th></th> 
+        </tr>
+    </thead> 
+    <tbody> 
+        <% @games.each do |game| %> 
+            <tr> 
+                <td><%= game.name %></td>
+                <td><%= game.winner %></td> 
+                <td><%= game.loser %></td>  
+                <td><%= game.gametime %>  
+                <td><%= link_to 'View', game %>   
+            </tr> 
+        <% end %> 
+    </tbody> 
+</table> 
