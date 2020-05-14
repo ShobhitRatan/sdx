@@ -3,20 +3,20 @@
 <table style="margin-left:auto;margin-right:auto;"> 
     <thead> 
         <tr> 
+            <th>Name</th> 
+            <th>City</th> 
             <th>Conference</th> 
             <th>Division</th> 
-            <th>Name</th> 
-            <th>City</th>  
             <th></th> 
         </tr>
     </thead> 
     <tbody> 
         <% @teams.each do |team| %> 
             <tr> 
-                <td><%= team.conference.name %></td>
-                <td><%= team.division.region %></td> 
                 <td><%= team.name %></td>  
-                <td><%= team.city %>  
+                <td><%= team.city %>
+                <td><%= team.conference.name %></td>
+                <td><%= team.division.region %></td>   
                 <td><%= link_to 'View', team %>  
             </tr> 
         <% end %> 

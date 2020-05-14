@@ -1,5 +1,7 @@
 <div class="locations"> 
-    <h1><%= @address.address_type %></h1> 
+<h1><%= @address.address_type %></h1> 
+
+        
     <p><%= @address.address_line_1 %></p> 
     <p><%= @address.address_line_2 %></p> 
     <p><%= @address.city %></p> 
@@ -9,4 +11,5 @@
     <%= button_to 'Delete', address_path, method: :delete, data: { confirm: 'Are you sure you want to delete this address?' } %> 
     <%= button_to 'Edit', edit_address_path, method: :get %> 
     <%= button_to 'Back', addresses_path, method: :get %> 
+
 </div>
