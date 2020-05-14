@@ -1,13 +1,17 @@
 <nav class="nav_links fixed-top">
+<%= link_to "SDX", root_path, class: "navbar-brand", id: "logo" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
     <div>
       <ul>
-        <li><%= link_to "SDX", root_path %></li>
+        <li></li>
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", root_path %></li>
         <li><%= link_to "Account", addresses_path %> 
           <ul><li><%= link_to "Manage Account", addresses_path %></li>
             <li><%= link_to "Manage Premium Account", payments_path %></li></ul></li> 
-        <li><%= link_to "Theoretical Game Prediction", conferences_path %>
+        <li><%= link_to "Theoretical Game Prediction Statistics", conferences_path %>
           <ul><li><%= link_to "Teams", teams_path %></li> 
             <li><%= link_to "Games", games_path %></li></ul></li> 
         </ul>
