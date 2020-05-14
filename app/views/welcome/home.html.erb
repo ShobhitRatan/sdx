@@ -4,3 +4,191 @@
 <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %> 
     <input type=submit value='logout'> 
 <% end %> 
+<div class="container mt-2">
+      <div class="row">
+        <div class="col-12">
+          <div class="jumbotron">
+			  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+				  <div class="carousel-inner">
+					  <div class="carousel-item active">
+						  <img class="d-block w-100" src="images/ezgif-3-1223cc5d6cdd.gif" alt="First slide">
+					  </div>
+
+					  <div>
+						  <h1 class="text-center">Sports Data Xchange</h1>
+					  </div>
+					  <div class="row justify-content-center" class ="bg-transparent">
+						  <div class="col-auto">
+						  <img src="images/SDXLOGO.png" alt="" width="1200" height="675" class="img-fluid img-thumbnail">
+						  </div>
+					  </div>
+					  <div class="row justify-content-center">
+						  <div class="col-auto">
+							  <p><a class="btn btn-success btn-lg" href="#" data-toggle="modal" data-target="#PredictGameModal" role="button">Predict Game</a> </p>
+						  </div>
+						  <div class="col-auto">
+							  <p><a class="btn btn-primary btn-lg" href="#" data-toggle="modal" data-target="#FantasyGameModal" role="button">Fantasy Match</a> </p>
+						  </div>  
+					  </div>
+					  
+					  
+					  <div id="PredictGameModal" class="modal fade" role="dialog"> <!-- Modal -->
+						  <div class="modal-dialog">
+							  <div class="modal-content"> <!-- Modal content-->
+								  <div class="modal-header">
+									  <button type="button" class="close" data-dismiss="modal">&times;</button>
+									  <h4 class="modal-title">Predict Game</h4>
+								  </div>
+								  <div class="modal-body">
+									  <img src="images/ezgif-3-1223cc5d6cdd.gif" alt="" width="1200" height="675" class="img-fluid img-thumbnail">
+									  <div>
+										  <form action="/action_page.php">
+											  <label for="PredictGame">Please select an upcoming game: </label>
+											  <select id="PredictGame" name="PredictGame">
+												  <option value="Select Upcoming Game"></option>
+												  <option value="GameA">12/29/19: Packers vs. Lions</option>
+												  <option value="GameB">12/29/19: Jets vs Bills</option>
+												  <option value="GameC">12/29/19: Rams vs. 49ers</option>
+											  </select>
+										  </form>
+										  <p><a class="btn btn-success btn-lg" href="#" role="button">Predict Game</a> </p>
+									  </div>
+									  <p>Predict Game coming soon!.</p>
+								  </div>
+								  <div class="modal-footer">
+									  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								  </div>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+				  <div id="FantasyGameModal" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+						  <div class="modal-content"> <!-- Modal content-->
+							  <div class="modal-header">
+								  <button type="button" class="close" data-dismiss="modal">&times;</button>
+								  <h4 class="modal-title">Fantasy Game</h4>
+							  </div>
+							  <div class="modal-body">
+								  <img src="images/ezgif-3-1223cc5d6cdd.gif" alt="" width="1200" height="675" class="img-fluid img-thumbnail">
+								  <form action="/action_page.php">
+									  <label for="FantasyTeamA">Please select an upcoming game: </label>
+									  <select id="FantasyTeamA" name="FantasyTeamA">
+										  <option value="Select Upcoming Game"></option>
+										  <option value="Packers">Packers</option>
+										  <option value="Jets">Jets</option>
+										  <option value="Rams">Rams</option>
+									  </select>
+								  </form>
+								  <form action="/action_page.php">
+									  <label for="FantasyTeamB">Please select an upcoming game: </label>
+									  <select id="FantasyTeamB" name="FantasyTeamB">
+										  <option value="Select Upcoming Game"></option>
+										  <option value="Lions">Lions</option>
+										  <option value="Bills">Bills</option>
+										  <option value="49ers">49ers</option>
+									  </select>
+								  </form>
+								  <form action="/action_page.php">
+									  <label for="FantasyDateA">Please select an upcoming game: </label>
+									  <select id="FantasyDateA" name="FantasyDateA">
+										  <option value="Select Year"></option>
+										  <option value="2015">2015</option>
+										  <option value="2016">2016</option>
+										  <option value="2017">2017</option>
+									  </select>
+								  </form>
+								  <p><a class="btn btn-success btn-lg" href="#" role="button">Fantasy Game</a> </p>
+								  <p>Fantasy Game coming soon!.</p>
+							  </div>
+							  <div class="modal-footer">
+								  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+			</div>
+			<p class="text-center">The answer to all your questions, at your fingertips...</p>
+		  </div>
+        </div>
+      </div>
+	  </div>
+    
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2> Step 1:</h2>
+			<h4> Choose what you want to calculate</h4>
+          <p>Choose to predict an upcoming game or feed your curiousity with a fantasy match</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2> Step 2:</h2>
+			<h4> Choose your teams</h4>
+          <p>By default, game predictor gives you dates to choose.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2> Step 3:</h2>
+			<h4> Predict!</h4>
+          <p>Once you picked all your settings, click predict and see the outcomes. Wait a bit while our tool calculates.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2>Step 4:</h2>
+			<h4> See the results</h4>
+          <p>A full report of the game is provided, with visuals.</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+	  <hr>
+	  <div class="container">
+      <div class="row">
+        <div class="text-center col-md-6 col-12">
+          <h3>Join for Free</h3>
+          <p>Get access to using our "Fantasy Match" program, where you can compare the performance of teams in hypothetical games.</p>
+          <a class="btn btn-danger btn-lg" href="Registration.html" role="button">Sign up</a>
+        </div>
+        <div class="text-center col-md-6 col-12">
+          <h3>Go Premium</h3>
+          <p>Get full access to our tool to predict this season's games. Be the talk of your friends with the ability to predict next week's game.</p>
+          <a class="btn btn-info btn-lg" href="#" role="button">$14.99 mo/</a>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-md-0 mb-2">
+          <h2>Contact Us</h2>
+          <address>
+            <strong>Sports Data Xchange.</strong><br>
+            Zicklin School of Business,<br>
+            New York, New York, US<br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+          </address>
+          <h4>Social</h4>
+          <div class="row">
+            <div class="col-2"><img class="rounded-circle" src="images/32X32.gif" alt=""></div>
+            <div class="col-2"><img class="rounded-circle" src="images/32X32.gif" alt=""></div>
+            <div class="col-2"><img class="rounded-circle" src="images/32X32.gif" alt=""></div>
+            <div class="col-2"><img class="rounded-circle" src="images/32X32.gif" alt=""></div>
+          </div>
+        </div>
+        
+        <div class="col-lg-8 col-12">
+          <h2>About Us</h2>
+          <p>Sports Data Xchange began as a project in January 2020 to answer the the age old question: who are you putting your money on?</p>
+          <p>Sports Data Exchange consists of ....</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
