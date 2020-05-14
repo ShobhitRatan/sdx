@@ -47,4 +47,14 @@ nav a:hover { color: rgb(204, 223, 41); }
 .logout form {
     text-align: center;
 }
+
+.jumbotron {
+    background-image: asset-url('ezgif-3-1223cc5d6cdd.gif');
+    background-repeat: no-repeat;
+    background-size: 1280px 720px;
+}
  
+table, th, td {
+    border: 1px solid black;
+    padding: 15px;
+  }
