@@ -15,6 +15,104 @@
                 Or <%= link_to(controller: 'users', action: 'new') { 'Sign Up' } %> 
             </div> 
         <% end %> 
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-12">
+          <div class="container" id="home-container">
+  <div class="jumbotron text-center text-white">
+    <h1 class="display-4">Sports Data Xchange</h1>
+    <p class="lead">Your #1 choice when predicting Football!</p>
+    <hr class="my-4">
+    <p></p>
+    
+  </div>
+</div>
+        </div>
+      </div>
+	  </div>
+    
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2> Step 1:</h2>
+			<h4> Choose what you want to calculate</h4>
+          <p>Choose to predict an upcoming game or feed your curiousity with a fantasy match</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2> Step 2:</h2>
+			<h4> Choose your teams</h4>
+          <p>By default, game predictor gives you dates to choose.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2> Step 3:</h2>
+			<h4> Predict!</h4>
+          <p>Once you picked all your settings, click predict and see the outcomes. Wait a bit while our tool calculates.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <h2>Step 4:</h2>
+			<h4> See the results</h4>
+          <p>A full report of the game is provided, with visuals.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="center">
+
+
+
+	  <hr>
+
+    </div>
+	  <div class="container">
+      <div class="row">
+        <div class="text-center col-md-6 col-12">
+          <h3>Join for Free</h3>
+          <p>Get access to using our "Fantasy Match" program, where you can compare the performance of teams in hypothetical games.</p>
+          <a class="btn btn-danger btn-lg" href="Registration.html" role="button">Sign up</a>
+        </div>
+        <div class="text-center col-md-6 col-12">
+          <h3>Go Premium</h3>
+          <p>Get full access to our tool to predict this season's games. Be the talk of your friends with the ability to predict next week's game.</p>
+          <a class="btn btn-info btn-lg" href="#" role="button">$14.99 mo/</a>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-md-0 mb-2">
+          <h2>Contact Us</h2>
+          <address>
+            <strong>Sports Data Xchange.</strong><br>
+            Zicklin School of Business,<br>
+            New York, New York, US<br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+          </address>
+        </div>
+        
+        <div class="col-lg-8 col-12">
+          <h2>About Us</h2>
+          <p>Sports Data Xchange began as a project in January 2020 to answer the the age old question: who are you putting your money on?</p>
+          <p>Sports Data Exchange consists of ....</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %> 
+    <input type=submit value='logout'> 
+    <% end %> 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    
    </div>
   </div>
 </div>

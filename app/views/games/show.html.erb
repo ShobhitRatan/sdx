@@ -4,20 +4,21 @@
     <h3>Loser: <%= @game.loser %></h3>
     <h3>Game Time: <%= @game.gametime %></h3> 
     <h1>Game stats are as follows</h1> 
-    <% @game.gamedays.uniq.each do |gameday| %> 
-        <table> 
-            <thead> 
-                <tr>
-                    <th>Team Name</th> 
-                    <th>Score</th>
-                    <th>Time of Possession</th> 
-                    <th>Passing Yards</th> 
-                    <th>Rushing Yards</th> 
-                    <th>Total Turnovers</th> 
-                    <th>Penalties</th> 
-                </tr> 
-            </thead> 
-            <tbody> 
+    
+    <table> 
+        <thead> 
+            <tr>
+                <th>Team Name</th> 
+                <th>Score</th>
+                <th>Time of Possession</th> 
+                <th>Passing Yards</th> 
+                <th>Rushing Yards</th> 
+                <th>Total Turnovers</th> 
+                <th>Penalties</th> 
+            </tr> 
+        </thead> 
+        <tbody> 
+            <% @game.gamedays.uniq.each do |gameday| %> 
                 <tr> 
                     <td><%= gameday.team.name %></td>
                     <td><%= gameday.score %></td>
@@ -27,9 +28,10 @@
                     <td><%= gameday.total_turnovers %></td> 
                     <td><%= gameday.penalties %></td> 
                 </tr> 
-            </tbody> 
-        </table> 
-    <% end %> 
+            <% end %>
+        </tbody> 
+    </table> 
+     
     <p>Based on this game's analysis, we have seen that the winning teams on 
     average have higher passing yards and higher rushing yards than the losing team. 
     Time of possession is a significant factor in completely one sided games but has a reduced impact in even contests.</p> 
