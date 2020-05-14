@@ -9,6 +9,7 @@
             <th>Payment Type</th> 
             <th>First Payment</th> 
             <th>Last Payment</th> 
+            <th></th>
         </tr> 
     </thead> 
     <tbody> 
@@ -19,7 +20,7 @@
                 <td><%= payment.updated_at %> 
                 <td> 
                     <%= link_to 'View', payment %> |
-                    <%= link_to 'Edit', edit_payment_path(payment) %> 
+                    <%= link_to 'Edit', edit_payment_path(payment) %> |
                     <%= link_to 'Delete', payment, method: :delete, data: { confirm: 'Are you sure you want to delete this payment?' } %> 
                 </td> 
             </tr> 
