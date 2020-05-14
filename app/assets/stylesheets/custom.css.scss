@@ -1,2 +1,60 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+nav { position: relative;
+    left: auto;
+    top: 0px;
+    padding: 10px 10px 10px 10px;
+    background-color: #5564A0;
+    text-align: center;
+}
+nav a { text-decoration: none;
+      color: #ffffff;
+      text-align: center;
+}
+nav ul { list-style-type: none; 
+       margin: 0;
+}
+nav li { padding: 0.5em;
+       display: inline-block;
+}
+nav ul ul { position: absolute;
+    background-color: #5564A0;
+    padding: 0;
+    text-align: left;
+    display: none;
+}
+nav ul ul li { border: 1px solid rgb(204, 223, 41);
+       display: block;
+       width: 7em;
+       padding-left: 1em;
+       margin-left: 0;
+}
+nav li:hover ul { display: block; } 
+
+nav a:link { color: #ffffff; }
+nav a:visited { color: #ffffff; }
+nav a:hover { color: rgb(204, 223, 41); } 
+
+.new_user {
+    position: relative; 
+    text-align: center;
+}
+
+.new_user .actions a {
+    text-decoration: none; 
+}
+
+.logout form {
+    text-align: center;
+}
+
+.jumbotron {
+    background-image: asset-url('ezgif-3-1223cc5d6cdd.gif');
+    background-repeat: no-repeat;
+    background-size: 1280px 720px;
+}
+ 
+table, th, td {
+    border: 1px solid black;
+    padding: 15px;
+  }
