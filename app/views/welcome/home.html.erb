@@ -60,12 +60,12 @@ Hi, <%= @user.name %>
         <div class="text-center col-md-6 col-12">
           <h3>Join for Free</h3>
           <p>Get access to using our "Fantasy Match" program, where you can compare the performance of teams in hypothetical games.</p>
-          <a class="btn btn-danger btn-lg" href="Registration.html" role="button">Sign up</a>
+          <p><%= link_to "Sign Up", addresses_path %></p> 
         </div>
         <div class="text-center col-md-6 col-12">
           <h3>Go Premium</h3>
           <p>Get full access to our tool to predict this season's games. Be the talk of your friends with the ability to predict next week's game.</p>
-          <a class="btn btn-info btn-lg" href="#" role="button">$14.99 mo/</a>
+          <p><%= link_to "$14.99/mo.", payments_path %></p> 
         </div>
       </div>
     </div>
