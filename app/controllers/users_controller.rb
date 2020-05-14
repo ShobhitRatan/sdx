@@ -20,17 +20,17 @@ class UsersController < ApplicationController
     
 
     def edit 
-        @user = User.find(params[:id]) 
+        @user = User.find_by(params[:id]) 
     end 
 
     def update 
-        @user = User.find(params[:id]) 
+        @user = User.find_by(params[:id]) 
         @user.update(user_params) 
         redirect_to user_path(@user) 
     end 
 
     def destroy 
-        @user = User.find(params[:id]) 
+        @user = User.find_by(params[:id]) 
         @user.destroy 
         redirect_to plants_url 
     end 
