@@ -4,6 +4,7 @@
     <h1>Teams in this division</h1> 
     <% @division.afc_east_teams.each do |team|%> 
          <p><%= link_to team.name, team_path(team) %> 
+         <hr style="width:50%"> 
     <% end %> 
 
     <h2><%= button_to "Back", divisions_path, method: :get %></h2>
