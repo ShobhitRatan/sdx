@@ -1,7 +1,6 @@
 <%= form_for @address do |f| %> 
     <div class="field"> 
-        <%= f.label :user_id %> 
-        <%= f.collection_select :user_id, @users, :id, :name %> 
+        <%= f.hidden_field :user_id, :value => current_user.id %>  
     </div> 
     <div class="field"> 
         <%= f.label :address_type %> 

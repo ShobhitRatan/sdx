@@ -6,7 +6,7 @@ class PaymentsController < ApplicationController
 
     def show 
         @user = current_user 
-        @payment = @user.payments.find_by(params[:id]) 
+        @payment = @user.payments.find(params[:id]) 
     end 
 
     def new 

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get '/login' => 'sessions#new' 
-  post '/login' => 'sessions#create' 
-  post '/logout' => 'sessions#destroy' 
+  devise_for :users 
   root 'welcome#home' 
   resources :current_seasons
   resources :seasons
@@ -16,6 +14,5 @@ Rails.application.routes.draw do
   resources :countries
   resources :states
   resources :addresses
-  resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

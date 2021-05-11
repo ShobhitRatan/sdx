@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body {
+  padding-top: 100px;
+}
+
+nav {
+  position: relative;
+  left: auto;
+  top: 0px;
+  padding: 10px 10px 10px 10px;
+  background-color: #5564a0;
+  text-align: center;
+}
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+nav li {
+  padding: 0.5em;
+  display: inline-block;
+}
+nav ul ul {
+  position: absolute;
+  background-color: #5564a0;
+  padding: 0;
+  text-align: left;
+  display: none;
+}
+nav ul ul li {
+  border: 1px solid rgb(204, 223, 41);
+  display: block;
+  width: 7em;
+  padding-left: 1em;
+  margin-left: 0;
+}
+nav li:hover ul {
+  display: block;
+}
+
+nav a:link {
+  color: #ffffff;
+}
+nav a:visited {
+  color: #ffffff;
+}
+nav a:hover {
+  color: rgb(204, 223, 41);
+}
+
+.logo {
+  float: left;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.new_user {
+  position: relative;
+  text-align: center;
+}
+
+.new_user .actions a {
+  text-decoration: none;
+}
+
+.logout form {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('ezgif-3-1223cc5d6cdd.gif');
+  background-repeat: no-repeat;
+  background-size: 1280px 720px;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    asset-url('nflbanner.png');
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.logout form {
+  text-align: center;
+}
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap/dist/css/bootstrap';

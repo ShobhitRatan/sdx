@@ -11,8 +11,8 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all 
+#   Character.create(name: 'Luke', movie: movies.first) 
+User.destroy_all
 Division.destroy_all 
 Conference.destroy_all 
 Team.destroy_all 
@@ -20,9 +20,8 @@ Game.destroy_all
 Gameday.destroy_all 
 Season.destroy_all 
 
-30.times do 
-    User.create(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: Faker::IDNumber.valid)   
-end 
+barryallen = User.create(email: "barryallen@gmail.com", name: "Barry Allen", password: "Pass$123")
+oliverqueen = User.create(email: "oliverqueen@gmail.com", name: "Oliver Queen", password: "Pass$123") 
 
 east = Division.create(region: "East") 
 north = Division.create(region: "North") 
@@ -103,30 +102,7 @@ game_27 = Game.create(name: "Miami Dolphins vs. NY Jets", winner: "NY Jets", los
 game_28 = Game.create(name: "Miami Dolphins vs. NY Giants", winner: "NY Giants", loser: "Miami Dolphins", gametime: Date.new(2019,12,15)) 
 game_29 = Game.create(name: "Miami Dolphins vs. Cincinnati Bengals", winner: "Miami Dolphins", loser: "Cincinnati Bengals", gametime: Date.new(2019,12,22)) 
 game_30 = Game.create(name: "Miami Dolphins vs. New England Patriots", winner: "Miami Dolphins", loser: "New England Patriots", gametime: Date.new(2019,12,29)) 
-# New England Patriots Games 
-game_31 = Game.create(name: "New England Patriots vs. Pittsburgh Steelers", winner: "New England Patriots", loser: "Pittsburgh Steelers", gametime: Date.new(2019,9,8)) 
-game_32 = Game.create(name: "New England Patriots vs. NY Jets", winner: "New England Patriots", loser: "NY Jets", gametime: Date.new(2019,9,22)) 
-game_33 = Game.create(name: "New England Patriots vs. Washington Redskins", winner: "New England Patriots", loser: "Washington Redskins", gametime: Date.new(2019,10,6))  
-game_34 = Game.create(name: "New England Patriots vs. NY Giants", winner: "New England Patriots", loser: "NY Giants", gametime: Date.new(2019,10,10)) 
-game_35 = Game.create(name: "New England Patriots vs. NY Jets", winner: "New England Patriots", loser: "NY Jets", gametime: Date.new(2019,10,21)) 
-game_36 = Game.create(name: "New England Patriots vs. Cleveland Browns", winner: "New England Patriots", loser: "Cleveland Browns", gametime: Date.new(2019,10,27)) 
-game_37 = Game.create(name: "New England Patriots vs. Baltimore Ravens", winner: "Baltimore Ravens", loser: "New England Patriots", gametime: Date.new(2019,11,3)) 
-game_38 = Game.create(name: "New England Patriots vs. Philidelphia Eagles", winner: "New England Patriots", loser: "Philidelphia Eagles", gametime: Date.new(2019,11,17)) 
-game_39 = Game.create(name: "New England Patriots vs. Dallas Cowboys", winner: "New England Patriots", loser: "Dallas Cowboys", gametime: Date.new(2019,11,24)) 
-game_40 = Game.create(name: "New England Patriots vs. Houston Texans", winner: "Houston Texans", loser: "New England Patriots", gametime: Date.new(2019,12,1)) 
-game_41 = Game.create(name: "New England Patriots vs. Kansas City Chiefs", winner: "Kansas City Chiefs", loser: "New England Patriots", gametime: Date.new(2019,12,8)) 
-game_42 = Game.create(name: "New England Patriots vs. Cincinnati Bengals", winner: "New England Patriots", loser: "Cincinnati Bengals", gametime: Date.new(2019,12,15)) 
-# NY Jets Games 
-game_43 = Game.create(name: "NY Jets vs. Cleveland Browns", winner: "Cleveland Browns", loser: "NY Jets", gametime: Date.new(2019,9,16)) 
-game_44 = Game.create(name: "NY Jets vs. Philidelphia Eagles", winner: "Philidelphia Eagles", loser: "NY Jets", gametime: Date.new(2019,10,6)) 
-game_45 = Game.create(name: "NY Jets vs. Dallas Cowboys", winner: "NY Jets", loser: "Dallas Cowboys", gametime: Date.new(2019,10,13)) 
-game_46 = Game.create(name: "NY Jets vs. Jacksonville Jaguars", winner: "Jacksonville Jaguars", loser: "NY Jets", gametime: Date.new(2019,10,27)) 
-game_47 = Game.create(name: "NY Jets vs. NY Giants", winner: "NY Jets", loser: "NY Giants", gametime: Date.new(2019,11,10)) 
-game_48 = Game.create(name: "NY Jets vs. Washington Redskins", winner: "NY Jets", loser: "Washington Redskins", gametime: Date.new(2019,11,17)) 
-game_49 = Game.create(name: "NY Jets vs. Las Vegas Raiders", winner: "NY Jets", loser: "Las Vegas Raiders", gametime: Date.new(2019,11,24)) 
-game_50 = Game.create(name: "NY Jets vs. Cincinnati Bengals", winner: "Cincinnati Bengals", loser: "NY Jets", gametime: Date.new(2019,12,1)) 
-game_51 = Game.create(name: "NY Jets vs. Baltimore Ravens", winner: "Baltimore Ravens", loser: "NY Jets", gametime: Date.new(2019,12,12)) 
-game_52 = Game.create(name: "NY Jets vs. Pittsburgh Steelers", winner: "NY Jets", loser: "Pittsburgh Steelers", gametime: Date.new(2019,12,22)) 
+
 
   
 bb_gameday_1 = Gameday.create(game: game_1, team: buffalo_bills, score: 17, time_of_possession: "27:59", passing_yards: 242.0, rushing_yards: 128.0, total_turnovers: 2, penalties: 7) 
@@ -222,25 +198,3 @@ game_27_2019 = CurrentSeason.create(season: regular_season, game: game_27)
 game_28_2019 = CurrentSeason.create(season: regular_season, game: game_28) 
 game_29_2019 = CurrentSeason.create(season: regular_season, game: game_29) 
 game_30_2019 = CurrentSeason.create(season: regular_season, game: game_30)       
-game_31_2019 = CurrentSeason.create(season: regular_season, game: game_31) 
-game_32_2019 = CurrentSeason.create(season: regular_season, game: game_32) 
-game_33_2019 = CurrentSeason.create(season: regular_season, game: game_33) 
-game_34_2019 = CurrentSeason.create(season: regular_season, game: game_34) 
-game_35_2019 = CurrentSeason.create(season: regular_season, game: game_35)
-game_36_2019 = CurrentSeason.create(season: regular_season, game: game_36)
-game_37_2019 = CurrentSeason.create(season: regular_season, game: game_37) 
-game_38_2019 = CurrentSeason.create(season: regular_season, game: game_38) 
-game_39_2019 = CurrentSeason.create(season: regular_season, game: game_39)
-game_40_2019 = CurrentSeason.create(season: regular_season, game: game_40) 
-game_41_2019 = CurrentSeason.create(season: regular_season, game: game_41) 
-game_42_2019 = CurrentSeason.create(season: regular_season, game: game_42)
-game_43_2019 = CurrentSeason.create(season: regular_season, game: game_43)
-game_44_2019 = CurrentSeason.create(season: regular_season, game: game_44) 
-game_45_2019 = CurrentSeason.create(season: regular_season, game: game_45) 
-game_46_2019 = CurrentSeason.create(season: regular_season, game: game_46) 
-game_47_2019 = CurrentSeason.create(season: regular_season, game: game_47) 
-game_48_2019 = CurrentSeason.create(season: regular_season, game: game_48) 
-game_49_2019 = CurrentSeason.create(season: regular_season, game: game_49) 
-game_50_2019 = CurrentSeason.create(season: regular_season, game: game_50) 
-game_51_2019 = CurrentSeason.create(season: regular_season, game: game_51) 
-game_52_2019 = CurrentSeason.create(season: regular_season, game: game_52) 
