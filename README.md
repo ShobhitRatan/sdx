@@ -14,10 +14,9 @@ Sports Data Xchange is an NFL Statistics website where users are able to see his
 </ol>
 <h2>Core Features</h2>
 <ul>
-  <li>A User can register to the website.</li>
-  <li>A User can login to the website.</li>
+  <li>Registration.</li>
   <li>Implemented Session based Authentication.</li>
-  <li>Ability to enter and update personal and payment details</li> 
+  <li>Ability to enter and update personal and payment details.</li> 
   <li>Ability to see the season, teams, games and matches.</li> 
 </ul>
 <h2>Future Goals</h2>
